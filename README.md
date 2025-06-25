@@ -11,12 +11,12 @@ This Python project allows you to securely hide and extract secret messages insi
 - Dynamic message size tracking (via 32-bit header)
 - Error handling for oversized messages and file access
 - Simple CLI interface for encoding/decoding
-- 
+  
 📦 Requirements
 
 - Python 3.x
 - Pillow library (pip install pillow)
-- 
+  
 🚀 How to Use
 
 - Run the script:
@@ -28,14 +28,14 @@ python stego_encryptor.py
 - Image path
 - Message or encryption key
 - Output path (for encoding)
-- 
+  
 🔐 How It Works
 
 - The secret message is first XOR-encrypted using the key.
 - The length of the encrypted byte stream is encoded in the first 32 bits.
 - The resulting binary string is embedded into the image's RGB values using least significant bit (LSB) encoding.
 - The decoding process reverses the steps using the correct password.
-- 
+  
 ⚠️ Notes
 
 - Works best with PNG or BMP images (uncompressed).
